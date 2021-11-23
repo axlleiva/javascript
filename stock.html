@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock</title>
+    <link rel="stylesheet" href="./sass/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+</head>
+
+<body>
+    <header class="flex-column bg_img-gama">
+        <!-- logo y nombre -->
+        <nav class="flex-row">
+            <div class="marca flex-row">
+                <img id="logo" src="./img/logo-Peugeot.png" alt="logo-Peugeot" width="100" height=auto>
+                <h1 class="animate__animated animate__backInRight">Accesorios</h1>
+            </div>
+            <!-- navegador -->
+
+            
+        </nav>
+    </header>
+    <div class="alert alert-primary position-sticky top-0 agregarCarrito" role="alert">
+        Tu reserva se cargo!
+    </div>
+    <div class="alert alert-danger position-sticky top-0 remove" role="alert">
+        Se elimino tu reserva!
+    </div>
+      
+    
+    <main id="algo" class="main-gama">
+        <div id="filtro">
+            <h1 class="texto titulo ">Accesorios Disponibles</h1>
+            <h1 id="filtrar">Filtrar Por</h1>
+            <select name="modelo" id="modeloAuto">
+                <option value="208">208</option>
+                <option value="2008">2008 </option>
+                <option value="308">308</option>
+            </select>
+            <button id="mas" >+</button>
+            <button id="menos" >-</button>
+            <img src="./img/shopping-icon-gae70bdf10_640.png" class="imgCarrito" alt="">
+        </div>
+        <div id="main-menu" class="container-md">
+            <div class="row">
+                <div class=" col titulo">
+                    
+                    <img src="./img accesorios/accesorio_101.png" class="imagen" alt="208">
+                    <h3 class="car-title item-id ">ALARMA VOLUMÉTRICA 2008</h3>
+                   
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                    <button id="boton208" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
+                    
+                </div>
+                <div class="col titulo">
+                    
+                    <img src="./img accesorios/accesorio_117.png" class="imagen" alt="308">
+                    <h3 class="car-title item-id">DEFLECTOR</h3>
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                    <button id="boton308" type="button" class="button btn btn-primary btn-lg">Agregar</button>
+                   
+                </div>
+                <div class="col titulo">
+                   
+                    <img src="./img accesorios/accesorio_46.png" class="imagen" alt="408">
+                    <h3 class="car-title item-id">ALARMA VOLUMÉTRICA 208</h3>
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                    <button id="boton408" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
+                    
+                </div>
+                <div class="col titulo">
+                    
+                    <img src="./img accesorios/accesorio_163.png" class="imagen" alt="408">
+                    <h3 class="car-title item-id ">BARRAS DE TECHO</h3>
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                    <button id="boton408" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
+                    
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col titulo">
+                    
+                    <img src="./img accesorios/accesorio_194.png" class="imagen " alt="2008">
+                    <h3 class="car-title item-id ">COFRE DE TECHO RÍGIDO</h3>
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                    <button id="boton2008" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
+                    
+                </div>
+                <div class="col titulo">
+                    
+                    <img src="./img accesorios/accesorio_197.png" class="imagen" alt="2008">
+                    <h3 class="car-title item-id">SENSOR </h3>
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                
+                    <button id="boton2008" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
+                    
+                </div>
+                <div class="col titulo ">
+                    
+                    <img src="./img accesorios/accesorio_206.png" class="imagen" alt="5008">
+                    <h3 class="car-title item-id ">BANDEJA DE BAÚL</h3>
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                    <button id="boton5008" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
+                    
+                </div>
+                <div class="col titulo">
+                    
+                    <img src="./img accesorios/accesorio_205.png" class="imagen" alt="3008">
+                    <h3 class="car-title item-id ">MARCO </h3>
+                    <div class="precio car-cost item-precio">
+                        Precio:
+                        <span>$50000</span>
+                    </div>
+                    <button id="boton3008" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
+                    
+                </div>
+            </div>
+            
+
+                
+        </div>
+        <div class="mensajeFinal">
+            <p>Gracias por su compra , complete los datos faltantes y termine su compra </p>
+            <div class="container">
+                <div class="row finaldatos">
+                  <div class="col-6 col-sm-3">Nombre y Apellido</div>
+                  <div class="col-6 col-sm-3"><input id="nombreFinal" type="text"></div>
+              
+                  <!-- Force next columns to break to new line -->
+                  <div class="w-100"></div>
+              
+                  <div class="col-6 col-sm-3">Telefono</div>
+                  <div class="col-6 col-sm-3"><input id="celuFinal" type="number"></div>
+                  <div class="w-100"></div>
+
+                  <div class="col-6 col-sm-3">Mail</div>
+                  <div class="col-6 col-sm-3"><input id="mailFinal" type="email"></div>
+                </div>
+              </div>
+              <button id="btnf"><span class="noselect">Pagar</span><div id="circle"></div></button>
+        </div>
+        <div class="datoos"></div>
+        <div id="alertReserv">
+                       
+        </div>
+        <div class="titulo total ">
+            <div class="dolaresTotales">
+                <h3 class="dolar">Tomamos el dolar a USD: <p class="dolarCosto"></p></h3>
+                <h1 class="itemTotal ">Total: 0</h1>
+
+            </div>
+            
+            <button id="listo" >Listo</button>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="caja flex-row">
+            <div class="pieDePagina flex-column">
+                <img src="./img/clock.png" height="50px" width="50px" alt="relog">
+                <h2>Horarios</h2><br>
+                <h4>De lunes a Viernes <br> 9hs a 13hs y 14hs a 19hs</h4>
+            </div>
+
+            <div class="pieDePagina flex-column">
+                <img src="./img/llamada-telefonica.png" height="50px" width="50px" alt="">
+                <h2>Numero de Contacto</h2><br>
+                <h4>02304300200 (salon) <br> 0230 430 0210 (Repuestos) <br> 0230430 0222 (Taller y turnos)</h4>
+            </div>
+
+            <div class="pieDePagina flex-column">
+                <img src="./img/email.png" width="50px" height="50px" alt="">
+                <h2> Email</h2> <br>
+                <h4>info@chamonixsa.com.ar</h4>
+            </div>
+        </div>
+        <div class="logoFondo">
+            <img src="./img/logo-Peugeot.png" width="150" height="100" alt="">
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/reserva.js"></script>
+    
+</body>
+
+</html>
