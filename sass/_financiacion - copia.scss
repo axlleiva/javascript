@@ -1,0 +1,44 @@
+.elige {
+    padding: 20px;
+}
+
+.opciones {
+    justify-content: space-around;
+    .imagenes {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.contenedor {
+    position: relative;
+    height: 100%;
+    width: auto;
+    .capa {
+        position: absolute;
+        top: 0px;
+        text-align: center;
+        height: 100%;
+        width: 95%;
+        background: #0d100fa6;
+        transition: all 500ms ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.contenedor:hover>.capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.texto {
+    justify-content: space-around;
+}

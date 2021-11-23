@@ -1,0 +1,177 @@
+    header {
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+        nav {
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: solid 1px white;
+            align-items: center;
+        }
+        .navegador {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between
+        }
+        .marca {
+            #logo {
+                display: flex;
+            }
+            h1 {
+                color: black;
+                text-transform: uppercase;
+                margin-top: 7%;
+                color: white;
+            }
+        }
+        .menu {
+            justify-content: space-between;
+             :hover {
+                background-color: black;
+            }
+            li {
+                padding: 10px;
+                list-style: none;
+                background: #59635c99;
+                a {
+                    text-decoration: none;
+                    text-decoration: none;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        /* recordar colocar display none cuando utilizamos para otra pagina que no sea home */
+        .nuevasUnidades {
+            margin-left: 5%;
+            display: inline-flex;
+            position: relative;
+            margin-top: 9%;
+            .nuevo208 {
+                align-items: center;
+                color: white;
+                border-bottom: white solid 1px;
+                border-right: white solid 1px;
+                padding: 10px;
+                #boton {
+                    text-decoration: none;
+                    font-size: 30px;
+                    background: white;
+                    padding: 5px 20px 5px 20px;
+                    color: black;
+                }
+            }
+        }
+    }
+    
+    .respmenu a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        border-bottom: 2px solid #456789;
+        max-width: 200px;
+        background: #234567;
+        font-variant: small-caps;
+        text-shadow: 1px 1px black;
+    }
+    
+    .inco {
+        background-image: url(../img/menu.png);
+    }
+    
+    .respmenu input[type="checkbox"],
+    .respmenu .fa-bars,
+    .respmenu .fa-times {
+        position: absolute;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: 0;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .respmenu .fa-bars,
+    .respmenu .fa-times {
+        font-size: 48px;
+        pointer-events: none;
+    }
+    
+    .respmenu input[type="checkbox"] {
+        opacity: 0;
+    }
+    
+    .respmenu {
+        color: white;
+        position: relative;
+        min-height: 48px;
+        display: none;
+    }
+    
+    .respmenu nav {
+        display: none;
+    }
+    
+    .respmenu input:checked~nav {
+        display: block;
+    }
+    
+    .respmenu input:checked~.fa-bars {
+        display: none;
+    }
+    
+    .respmenu input:not(:checked)~.fa-times {
+        display: none;
+    }
+    
+    .novedad {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .bg_img-index {
+        background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/nouvelle-208/nuevo208/MastheadWeb.jpg?imwidth=1343);
+    }
+    
+    .bg_img-gama {
+        background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/new-5008-suv/nuevo-5008/1a-Mastehead_2880x1620_Desktop.jpg?imwidth=1042);
+    }
+    
+    .bg_img-financiacion {
+        background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/308-sw/l-m/308sMasthead.jpg?imwidth=1349);
+    }
+    
+    .bg_img-contacto {
+        background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/new-2008-suv/l-m/2008-Masthead-Component-Desktop.jpg?imwidth=1349);
+    }
+    
+    .bg_img-nosotros {
+        background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/partner-patagonica/im%C3%A1genes/MastheadWebPartnerPatagonica.jpg?imwidth=1349);
+    }
+    
+    @media (max-width: 768px) {
+        header.navegador {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu {
+            display: none;
+        }
+        .respmenu {
+            display: flex;
+        }
+    }

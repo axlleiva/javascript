@@ -1,0 +1,32 @@
+footer {
+    background-image: url(https://www.chamonixsa.com.ar/img/b-feature-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    .caja {
+        justify-content: space-evenly;
+        .pieDePagina {
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            color: black;
+            background-color: #c1bebe82;
+            border-radius: 15px;
+            border: 3px solid white;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: 'Kaisei HarunoUmi', serif;
+        }
+    }
+    .logoFondo {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .caja {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

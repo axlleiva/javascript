@@ -1,0 +1,722 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  /* recordar colocar display none cuando utilizamos para otra pagina que no sea home */
+}
+
+header nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: solid 1px white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navegador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .marca #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .marca h1 {
+  color: black;
+  text-transform: uppercase;
+  margin-top: 7%;
+  color: white;
+}
+
+header .menu {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .menu :hover {
+  background-color: black;
+}
+
+header .menu li {
+  padding: 10px;
+  list-style: none;
+  background: #59635c99;
+}
+
+header .menu li a {
+  text-decoration: none;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+header .nuevasUnidades {
+  margin-left: 5%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  margin-top: 9%;
+}
+
+header .nuevasUnidades .nuevo208 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border-bottom: white solid 1px;
+  border-right: white solid 1px;
+  padding: 10px;
+}
+
+header .nuevasUnidades .nuevo208 #boton {
+  text-decoration: none;
+  font-size: 30px;
+  background: white;
+  padding: 5px 20px 5px 20px;
+  color: black;
+}
+
+.respmenu a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 2px solid #456789;
+  max-width: 200px;
+  background: #234567;
+  font-variant: small-caps;
+  text-shadow: 1px 1px black;
+}
+
+.inco {
+  background-image: url(../img/menu.png);
+}
+
+.respmenu input[type="checkbox"],
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.respmenu {
+  color: white;
+  position: relative;
+  min-height: 48px;
+  display: none;
+}
+
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked ~ nav {
+  display: block;
+}
+
+.respmenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+
+.novedad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bg_img-index {
+  background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/nouvelle-208/nuevo208/MastheadWeb.jpg?imwidth=1343);
+}
+
+.bg_img-gama {
+  background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/new-5008-suv/nuevo-5008/1a-Mastehead_2880x1620_Desktop.jpg?imwidth=1042);
+}
+
+.bg_img-financiacion {
+  background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/308-sw/l-m/308sMasthead.jpg?imwidth=1349);
+}
+
+.bg_img-contacto {
+  background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/new-2008-suv/l-m/2008-Masthead-Component-Desktop.jpg?imwidth=1349);
+}
+
+.bg_img-nosotros {
+  background-image: url(https://www.peugeot.com.ar/content/dam/peugeot/argentina/b2c/our-range/partner-patagonica/im%C3%A1genes/MastheadWebPartnerPatagonica.jpg?imwidth=1349);
+}
+
+@media (max-width: 768px) {
+  header.navegador {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu {
+    display: none;
+  }
+  .respmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+footer {
+  background-image: url(https://www.chamonixsa.com.ar/img/b-feature-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+footer .caja {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .caja .pieDePagina {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  color: black;
+  background-color: #c1bebe82;
+  border-radius: 15px;
+  border: 3px solid white;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+footer .logoFondo {
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .caja {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.noved {
+  width: 100%;
+  background: #5d7d87;
+  padding: 20px;
+}
+
+.noved .nov {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 0px 30px 0px;
+}
+
+.noved .h2-nov {
+  border-bottom: 2px solid black;
+}
+
+.video {
+  height: 500px;
+}
+
+.titulo-tipo {
+  color: black;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+.descripcion {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Kaisei HarunoUmi', serif;
+  background-color: white;
+  height: 15rem;
+}
+
+.hov {
+  cursor: pointer;
+}
+
+.hov:hover {
+  -webkit-box-shadow: blue 10px 0px 25px;
+          box-shadow: blue 10px 0px 25px;
+}
+
+.texto-tipo {
+  font-size: 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: auto;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+.img-producto {
+  padding: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .novedad {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .novedad {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .descripcion {
+    height: 8rem;
+  }
+  h6 {
+    display: none;
+  }
+}
+
+main {
+  background:white
+}
+
+main .nosotros {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 0px 20px 20px 20px;
+}
+
+main .nosotros .parrafo {
+  color: black;
+}
+
+main .fuera {
+  width: 500px;
+  padding: 5px;
+}
+
+main .img_nosotros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .txt-aling {
+  text-align: center;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 400px;
+  /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .img_nosotros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+
+
+.main-gama .titulo {
+  padding: 10px;
+}
+
+.main-gama .boton {
+  padding: 20px;
+}
+
+.main-gama .hover:hover {
+  background-color: black;
+}
+#alertReserv{
+  color: black;
+  border: 1px,red,solid;
+  text-align: center;
+}
+.elige {
+  padding: 20px;
+}
+
+.opciones {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.opciones .imagenes {
+  height: 100%;
+  width: 100%;
+}
+
+.contenedor {
+  position: relative;
+  height: 100%;
+  width: auto;
+}
+
+.contenedor .capa {
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  height: 100%;
+  width: 95%;
+  background: #0d100fa6;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor .capa a {
+  text-decoration: none;
+  color: white;
+}
+
+.contenedor:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+
+.texto {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contacto {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.inline {
+  inline-size: 1px;
+}
+
+.botones {
+  border-radius: 5px;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+.alerta {
+  margin-top: 20%;
+}
+
+#aler {
+  color: black;
+  background-color: chocolate;
+}
+/*# sourceMappingURL=style.css.map */
+
+.agregarCarrito , .remove{
+  display: none;
+}
+
+.itemcarrito{
+  display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.titulo{
+  color: #00a3e0;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  display: flex;
+  flex-direction: column
+}
+
+#alertReserv{
+  border: 5px solid red;
+  border-radius: 5px ;
+  display: none;
+}
+.total{
+  display: none;
+
+  text-align: center;
+}
+.img-auto{
+  height: 150px;
+}
+#listo{
+  height: 50px;
+  width: 100px;
+  text-transform: uppercase;
+  color: red;
+  background: black;
+}
+
+.delete{
+  width: 29px;
+  background: black;
+  color: red;
+  border-radius: 10px;
+  height: auto;
+}
+#filtro{
+  display: flex;
+  align-items: center;
+  border-bottom: solid;
+  justify-content: space-around;
+}
+
+#filtrar{
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 20px;
+}
+.imagen{
+  display: block;
+  max-width: 100%;
+}
+.item-id{
+  font-family: "Peugeot-Bold";
+  font-weight: normal;
+  font-size: 0.9em;
+  height: 45px;
+  display: block;
+  padding-bottom: 35%;
+  padding-top: 15%;
+  color: black;
+
+}
+
+.item-precio{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: solid
+}
+.imgCarrito{
+  height: 60px
+}
+.dolaresTotales{
+  display: flex;
+  justify-content: space-between;
+}
+
+.mensajeFinal{
+  display: none;
+  text-align: center;
+  height: 200px;
+}
+
+
+#btnf {
+  background: #222;
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 40px;
+  font-family: 'Cookie', cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#btnf #circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+#btnf:hover {
+  background: transparent;
+}
+
+#btnf:hover #circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}
+#mas{
+  width: 50px
+}
+#menos{
+  width: 50px
+}
