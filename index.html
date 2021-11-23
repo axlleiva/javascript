@@ -150,7 +150,8 @@
         </div>
         <div class="mensajeFinal">
             <p>Gracias por su compra , complete los datos faltantes y termine su compra </p>
-            <div class="container">
+            <div id="fin"></div>
+            <div class="container ingrasarDatos">
                 <div class="row finaldatos">
                   <div class="col-6 col-sm-3">Nombre y Apellido</div>
                   <div class="col-6 col-sm-3"><input id="nombreFinal" type="text"></div>
@@ -165,11 +166,10 @@
                   <div class="col-6 col-sm-3">Mail</div>
                   <div class="col-6 col-sm-3"><input id="mailFinal" type="email"></div>
                 </div>
-              </div>
-                <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                    data-preference-id="150121867-a08f2e59-c609-4954-8218-bf6b365c12b9" data-source="button">
-                </script>
-              <button id="btnf"><span class="noselect">Pagar</span><div id="circle"></div></button>
+                <button id="btnf"><span class="noselect">Pagar</span><div id="circle"></div></button>
+            </div>
+            
+              
         </div>
         <div class="datoos"></div>
         <div id="alertReserv">

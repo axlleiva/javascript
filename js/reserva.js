@@ -204,16 +204,24 @@ $( () => {
 const nombreFinal =document.getElementById('nombreFinal');
 const celu=document.getElementById('celuFinal');
 const mail=document.getElementById('mailFinal');
+const domicilio=document.getElementById('domicilioFinal');
 let infoFinal =[]
 
 $("#btnf").click(function(){
     let nombre =nombreFinal.value;
     let celular=celu.value;
     let email = mail.value;
-    infoFinal.push(nombre,celular,email)
+    let casa = domicilio.value;
+    infoFinal.push(nombre,celular,email , casa)
     
-    console.log(nombre ,celular , email)
+    console.log(nombre ,celular , email , casa);
+   $(".ingrasarDatos").hide()
 
+    const end=`Gracias ${nombre} por realizar la compra, Te llegara un mail a ${email}
+    con los datos de la compra . 
+    en 5 dias habiles recibiras tu compra en el domicilio ${casa}`
+    
+    $("#fin").append(end)
 })
 $("#mas").click(function(){
   $(".texto").animate({
