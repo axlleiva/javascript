@@ -223,17 +223,19 @@ $("#btnf").click(function(){
     
     $("#fin").append(end)
 })
-$("#mas").click(function(){
-  $(".texto").animate({
-    fontSize: '+=7px',
-    height: '+=150px',
-    width: '+=150px'
-  });
-}); 
-$("#menos").click(function(){
-    $(".texto").animate({
-        fontSize: '-=7px',
-        height: '-=150px',
-        width: '-=150px'
-    });
-  });
+
+const img =document.querySelector(".imagen")
+var css500 = {'max-width' : '500px'}
+var css100 = {'max-width' : '100%'}
+let contador=0
+
+$(".imagen").click(function(){
+    if(contador==0){ 
+    $(this).animate(css500,1500)
+    contador = 1;
+    }
+    else{
+        $(this).animate(css100,'slow')
+        contador = 0;
+    }
+})
