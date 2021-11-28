@@ -40,16 +40,17 @@
             <h1 class="texto titulo ">Accesorios Disponibles</h1>
             <h1 id="filtrar">Filtrar Por</h1>
             <select name="modelo" id="modeloAuto">
-                <option value="208">208</option>
-                <option value="2008">2008 </option>
-                <option value="308">308</option>
+                <option value="all" >Todo</option>
+                <option value="208" >208</option>
+                <option value="2008" >2008 </option>
+                <option value="308" >308</option>
             </select>
         
             <img src="./img/shopping-icon-gae70bdf10_640.png" class="imgCarrito" alt="">
         </div>
         <div id="main-menu" class="container-md">
             <div class="row">
-                <div class=" col titulo">
+                <div class="col titulo" category="2008" >
                     
                     <img src="./img accesorios/accesorio_101.png" class="imagen" alt="208">
                     <h3 class="car-title item-id ">ALARMA VOLUMÉTRICA 2008</h3>
@@ -61,7 +62,7 @@
                     <button id="boton208" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
                     
                 </div>
-                <div class="col titulo">
+                <div class="col titulo" category="208"  >
                     
                     <img src="./img accesorios/accesorio_117.png" class="imagen" alt="308">
                     <h3 class="car-title item-id">DEFLECTOR</h3>
@@ -72,10 +73,10 @@
                     <button id="boton308" type="button" class="button btn btn-primary btn-lg">Agregar</button>
                    
                 </div>
-                <div class="col titulo">
+                <div class="col titulo" category="308">
                    
                     <img src="./img accesorios/accesorio_46.png" class="imagen" alt="408">
-                    <h3 class="car-title item-id">ALARMA VOLUMÉTRICA 208</h3>
+                    <h3 class="car-title item-id">ALARMA VOLUMÉTRICA </h3>
                     <div class="precio car-cost item-precio">
                         Precio:
                         <span>$50000</span>
@@ -83,7 +84,7 @@
                     <button id="boton408" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
                     
                 </div>
-                <div class="col titulo">
+                <div class="col titulo" category="2008">
                     
                     <img src="./img accesorios/accesorio_163.png" class="imagen" alt="408">
                     <h3 class="car-title item-id ">BARRAS DE TECHO</h3>
@@ -97,7 +98,7 @@
             </div>
            
             <div class="row">
-                <div class="col titulo">
+                <div class="col titulo" category="2008">
                     
                     <img src="./img accesorios/accesorio_194.png" class="imagen " alt="2008">
                     <h3 class="car-title item-id ">COFRE DE TECHO RÍGIDO</h3>
@@ -108,7 +109,7 @@
                     <button id="boton2008" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
                     
                 </div>
-                <div class="col titulo">
+                <div class="col titulo" category="2008">
                     
                     <img src="./img accesorios/accesorio_197.png" class="imagen" alt="2008">
                     <h3 class="car-title item-id">SENSOR </h3>
@@ -120,7 +121,7 @@
                     <button id="boton2008" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
                     
                 </div>
-                <div class="col titulo ">
+                <div class="col titulo " category="208">
                     
                     <img src="./img accesorios/accesorio_206.png" class="imagen" alt="5008">
                     <h3 class="car-title item-id ">BANDEJA DE BAÚL</h3>
@@ -131,7 +132,7 @@
                     <button id="boton5008" type="button"  class="button btn btn-primary btn-lg">Agregar</button>
                     
                 </div>
-                <div class="col titulo">
+                <div class="col titulo" category="208">
                     
                     <img src="./img accesorios/accesorio_205.png" class="imagen" alt="3008">
                     <h3 class="car-title item-id ">MARCO </h3>
@@ -147,7 +148,7 @@
 
                 
         </div>
-        <div class="mensajeFinal">
+        <div class="mensajeFinal" >
             <p>Gracias por su compra , complete los datos faltantes y termine su compra </p>
             <div id="fin"></div>
             <div class="container ingrasarDatos">
@@ -186,6 +187,7 @@
             </div>
             
             <button id="listo" >Listo</button>
+            <button id="volver">Volver</button>
         </div>
        
         

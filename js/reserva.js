@@ -7,7 +7,7 @@
 let carrito=[]
 const costo=50000
 const divreserv=document.getElementById("alertReserv");
-// array constructor y agragamos al carrito
+// array constructor y agragamos al carrito========================================
 $(".button").click(function(e){
 
     const button = e.target
@@ -24,7 +24,7 @@ $(".button").click(function(e){
     addcarrito(newitem)
 })
     
-// funcion agregar carrito 
+// funcion agregar carrito =================================================
 
 function addcarrito(newitem){
 
@@ -44,7 +44,7 @@ function addcarrito(newitem){
     carrito.push(newitem)
     rendercarrito()
 }
- // creamos el div en html con los borrar y contador
+ // creamos el div en html con los borrar y contador===============================
 function rendercarrito(){
 
     const alert =document.querySelector('.alert')
@@ -82,7 +82,7 @@ function rendercarrito(){
     })
     totalCarrito()
 }
-// suma total 
+// SUMAR TOTAL =============================================
 
 function totalCarrito(){
     let total =0;
@@ -96,7 +96,7 @@ function totalCarrito(){
     addLocalStorage()
    
 }
-// borrar 
+// BORRAR ITEM ===================================== 
 function borraritem(e){
    
 
@@ -122,25 +122,21 @@ function borraritem(e){
     totalCarrito()
 }
 
-// esto no funciona 
+// SUMAR CANTIDAD ===============================
 
 function sumartotal (e){
-    const sumarImput = e.target
-    const tr = sumarImput.closest(".itemcarrito")
-    const title = tr.querySelector('.title').textContent;
-    carrito.forEach( item => {
-        if(item.title.trim() === title){
-            sumarImput.value < 1 ? (sumarImput.value = 1) : sumarImput.value;
-            item.cantidad = sumarImput.value;
-            
-            totalCarrito()
-            console.log(totalCarrito)
-        }
-    })
+    sumar=e.target  
+    if(sumar.value<=0){
+        sumar.value=1
+        
+    }
+    totalCarrito()
+    
+  
 }
 
 
-
+//JSON GUARDA CARRITO==========================================
 
 function addLocalStorage(){
     localStorage.setItem('carrito',JSON.stringify(carrito));
@@ -154,15 +150,7 @@ window.onload =function(){
         rendercarrito()
     }
 }
-// mensaje de final 
-
-$("#listo").click(function(){
-    $(".mensajeFinal").css("display","block")
-    $("#alertReserv").css("display","none")
-    $(".total").css("display","none");
-})
-
-//boton carrito aparece y desaparece 
+//boton carrito aparece y desaparece  ============================
 
 $(".imgCarrito").click(function(){
     display=$("#main-menu").css("display");
@@ -181,7 +169,7 @@ $(".imgCarrito").click(function(){
     }
 })
 
-//api dolar 
+//api dolar ============================================
 $( () => {
 
     const URL = 'https://api.bluelytics.com.ar/v2/latest'
@@ -197,7 +185,7 @@ $( () => {
   
 })
 
-//mensaje final 
+//mensaje final =================================
   
   
     
@@ -223,7 +211,20 @@ $("#btnf").click(function(){
     
     $("#fin").append(end)
 })
+// BOTONES mensaje de final ===============================
 
+$("#listo").click(function(){
+    $(".mensajeFinal").css("display","block")
+    $("#alertReserv").css("display","none")
+    $(".total").css("display","none");
+})
+
+$("#volver").click(function(){
+    $("#main-menu").css("display","block");
+    $("#alertReserv").css("display","none")
+    $(".total").css("display","none");
+})
+//EFECTO==========================================
 const img =document.querySelector(".imagen")
 var css500 = {'max-width' : '500px'}
 var css100 = {'max-width' : '100%'}
@@ -237,5 +238,20 @@ $(".imagen").click(function(){
     else{
         $(this).animate(css100,'slow')
         contador = 0;
+    }
+})
+
+//filtro==================================
+
+$("#modeloAuto").change(function(){
+    var categoria = document.querySelector('#modeloAuto').value;
+    console.log(categoria )
+
+    $(".col").hide();
+
+    $(".col[category="+categoria+"]").show()
+
+    if(categoria== "all"){
+        $(".col").show();
     }
 })

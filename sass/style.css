@@ -599,12 +599,12 @@ main .txt-aling {
 .img-auto{
   height: 150px;
 }
-#listo{
+#listo , #volver{
   height: 50px;
   width: 100px;
   text-transform: uppercase;
-  color: red;
-  background: black;
+  color: #212529;
+  background: #b4b4ffa6;
 }
 
 .delete{
