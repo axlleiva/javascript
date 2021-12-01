@@ -720,3 +720,9 @@ main .txt-aling {
 #menos{
   width: 50px
 }
+.father{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}

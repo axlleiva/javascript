@@ -28,6 +28,13 @@ $(".button").click(function(e){
 
 function addcarrito(newitem){
 
+    const alert =document.querySelector('.alert')
+
+    setTimeout( function(){
+        alert.classList.add('agregarCarrito')
+    },2000)
+    alert.classList.remove('agregarCarrito')
+
     const inputelement=divreserv.getElementsByClassName("inputNumber")
     for(let i=0 ; i < carrito.length;i++){
         if(carrito[i].title.trim()=== newitem.title.trim()){
@@ -47,25 +54,20 @@ function addcarrito(newitem){
  // creamos el div en html con los borrar y contador===============================
 function rendercarrito(){
 
-    const alert =document.querySelector('.alert')
-
-    setTimeout( function(){
-        alert.classList.add('agregarCarrito')
-    },2000)
-    alert.classList.remove('agregarCarrito')
+    
 
     divreserv.innerHTML=''
     carrito.map(item=>{
         const tr =document.createElement('tr')
         tr.classList.add('itemcarrito')
         const conten=`
-        
-        <h3 class="title"> ${item.title}</h3>
-        <img src=${item.imagen} class=" img-auto ">
-        <h5>${costo}</h5>
-        <input type="number" min="1" value="${item.cantidad}" class="inputNumber">
-        <button class="delete">X</button>
-        
+        <div class="father">
+            <h3 class="title"> ${item.title}</h3>
+            <img src=${item.imagen} class=" img-auto ">
+            <h5>${costo}</h5>
+            <input type="number" min="1" value="${item.cantidad}" class="inputNumber">
+            <button class="delete">X</button>
+        </div>
         
         
         `
@@ -78,7 +80,8 @@ function rendercarrito(){
         $(".delete").click(borraritem);
 
         //tr.querySelector(".inputNumber").addEventListener('change',sumartotal);
-        $(".inputNumber").change(sumartotal);
+        $(".inputNumber").change(sumarcantidad);
+        
     })
     totalCarrito()
 }
@@ -86,8 +89,6 @@ function rendercarrito(){
 
 function totalCarrito(){
     let total =0;
-    
-    
     const itemtotal=document.querySelector('.itemTotal')
     carrito.forEach ((item)=>{
         total = total + costo*item.cantidad;
@@ -124,16 +125,21 @@ function borraritem(e){
 
 // SUMAR CANTIDAD ===============================
 
-function sumartotal (e){
-    sumar=e.target  
-    if(sumar.value<=0){
-        sumar.value=1
-        
+function sumarcantidad(e){
+    const sumaInput  = e.target
+    const tr = sumaInput.closest(".itemcarrito")
+    const title = tr.querySelector('.title').textContent;
+    for(let i=0 ; i < carrito.length;i++){
+        if(carrito[i].title.trim()=== title.trim()){ 
+        sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
+        carrito[i].cantidad = sumaInput.value;
+        totalCarrito()
+        return null;
+        }
     }
-    totalCarrito()
     
-  
-}
+  }
+//RESTAR UNIDAD=======================================
 
 
 //JSON GUARDA CARRITO==========================================
